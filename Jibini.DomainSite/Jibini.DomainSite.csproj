@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Pages\Index\_EmploymentList - Copy.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Index\_TechnologyItem.cshtml.cs" />
+  </ItemGroup>
+
 </Project>

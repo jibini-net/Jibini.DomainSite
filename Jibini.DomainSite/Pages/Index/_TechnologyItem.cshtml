@@ -1,0 +1,19 @@
+﻿@namespace Jibini.DomainSite.Pages
+@model TechnologyItem
+
+<div class="techs-item d-flex flex-row mt-4 pt-4">
+    <div class="p-4 h-auto my-auto">
+
+        <h4 class="m-auto text-light"><p class="@Model.IconClass" /></h4>
+
+    </div>
+    <div class="flex-grow-1">
+
+        <h5 class="text-light @Model.NameClass">@Model.Name</h5>
+        @if (Model.ShowDescription)
+        {
+            <p class="m-0">@Model.Description</p>
+        }
+
+    </div>
+</div>

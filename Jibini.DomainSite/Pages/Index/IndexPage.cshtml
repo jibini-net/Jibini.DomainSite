@@ -29,6 +29,15 @@
                 font-size: 1.2rem;
                 color: rgba(255, 255, 255, 0.75);
             }
+
+        .techs-item {
+            border-top: 1px dashed white;
+        }
+
+            .techs-item:nth-child(even) {
+                flex-direction: row-reverse !important;
+                text-align: right;
+            }
     </style>
 }
 
@@ -59,6 +68,19 @@
         </div>
 
         <div class="banner-brace">}</div>
+
+    </div>
+</div>
+
+<div class="row">
+        <div class="col col-12 col-md-7 mt-5">
+
+        @await Html.PartialAsync("_EmploymentList")
+
+    </div>
+        <div class="col col-12 col-md-5 mt-5">
+
+        @await Html.PartialAsync("_TechnologiesList")
 
     </div>
 </div>

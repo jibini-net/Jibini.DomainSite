@@ -1,0 +1,16 @@
+﻿@namespace Jibini.DomainSite.Pages
+
+<div class="text-white-50">
+
+    <h4>Technologies</h4>
+
+    <div class="techs-container">
+
+        @foreach(var tech in TechnologyItem.All)
+        {
+            @await Html.PartialAsync("_TechnologyItem", tech)
+        }
+
+    </div>
+
+</div>
