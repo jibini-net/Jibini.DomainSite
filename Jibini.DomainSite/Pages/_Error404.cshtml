@@ -1,0 +1,18 @@
+﻿@page
+@namespace Jibini.DomainSite.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+    Response.StatusCode = 404;
+}
+
+@section HeadContent {
+    <title>Not Found</title>
+}
+
+@section ScriptContent {
+
+}
+
+<h1>Not Found.</h1>
+<p>The path <code>"@(Request.Path)"</code> does not exist</p>

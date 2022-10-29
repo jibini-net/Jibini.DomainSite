@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace Jibini.DomainSite.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IConfiguration config
+
+@{
+    var gitHub = config["SocialLinks:GitHub"];
+    var linkedIn = config["SocialLinks:LinkedIn"];
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="Jibini.DomainSite.styles.css" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    @RenderSection("HeadContent")
+
+</head>
+<body class="bg-dark">
+
+    <div id="components-reconnect-modal" class="my-reconnect-modal components-reconnect-hide">
+        <div class="show">
+            <i class="fa fa-spinner fa-spin me-2"></i>
+            Attempting to connect to the server.
+            <a class="text-light ms-1" href="javascript:location.reload()">Reload</a>
+        </div>
+        <div class="failed">
+            Failed to connect to the server.
+            <a class="text-light ms-1" href="javascript:location.reload()">Reload</a>
+        </div>
+        <div class="rejected">
+            Failed to connect to the server.
+            <a class="text-light ms-1" href="javascript:location.reload()">Reload</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="top-bar">
+
+            <a href="~/" class="brand">
+                <h4>Zach Goethel<span class="blink-cursor"></span></h4>
+            </a>
+
+            <div class="page-links">
+
+                <a href="~/projects">
+                    <div class="page-icon">
+                        <i class="fa fa-folder"></i>
+                    </div>
+                    Projects
+                </a>
+
+                <a target="_blank" href="@gitHub">
+                    <div class="page-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    GitHub
+                </a>
+
+                <a target="_blank" href="@linkedIn">
+                    <div class="page-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+        <div class="page-body">
+
+            @RenderBody()
+
+        </div>
+        <div class="bottom-bar">
+
+            <div class="credit">
+                <i>Created by <a target="_blank" href="@gitHub">Zach Goethel</a>. Have a wonderful day!</i>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="fontawesome-5.15.4/js/all.js"></script>
+    @RenderSection("ScriptContent")
+
+    <script>
+        var PageLayout = {
+            init: () => {
+                setInterval(PageLayout.actions.toggleBlinkCursor, 1000);
+            },
+            actions: {
+                toggleBlinkCursor: () => $(".blink-cursor").toggleClass("d-none")
+            }
+        };
+
+        $(PageLayout.init);
+    </script>
+
+</body>
+</html>
