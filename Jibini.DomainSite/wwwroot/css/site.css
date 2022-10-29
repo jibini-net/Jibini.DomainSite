@@ -1,5 +1,21 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.banner {
+    padding: 2rem;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+    .banner.green-banner {
+        background: url("../images/banner_green.svg") no-repeat;
+    }
+
+    .banner.orange-banner {
+        background: url("../images/banner_orange.svg") no-repeat;
+    }
+
+/********/
+
 :root {
     --bg-purple: #8c708b;
     --bg-light-purple: #a49898;
@@ -211,7 +227,7 @@ a, .btn-link {
 #components-reconnect-modal {
     position: absolute;
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 0.3rem;
 }
 
 .components-reconnect-hide > div {
