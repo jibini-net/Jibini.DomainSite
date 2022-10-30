@@ -59,6 +59,7 @@
         var IndexPage = {
             init: () => {
                 $(window).scroll(IndexPage.actions.updateClone);
+                $(window).resize(IndexPage.actions.updateClone);
             },
             elements: {
                 scrollClone: () => $("#scroll-clone"),

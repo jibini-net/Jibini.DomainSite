@@ -63,6 +63,6 @@ public class TechnologyItem
             Name = "C and Low-level Code",
             IconClass = "fa fa-microchip",
             Description = "OS kernel and embedded development with a focus on memory safety and portability"
-        },
+        }
     };
 };
