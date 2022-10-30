@@ -70,9 +70,7 @@
                         .fixedClone()
                         .css(
                         {
-                            "display": rect.top < 0
-                                ? "block"
-                                : "none",
+                            "display": rect.top < 0 ? "block" : "none",
                             "width": rect.width + "px"
                         });
                 }
@@ -82,33 +80,15 @@
     </script>
 }
 
-<div class="banner green-banner d-flex flex-row">
-    <div class="mx-md-auto">
-
-        <div class="banner-brace">{</div>
-
-        <div class="ps-5" id="shout">
-            <h4 class="mb-2">// I like good code.</h4>
-            <p class="mb-3">
-                My world revolves around finding solutions to everyday problems.
-                Software is meant to simplify tasks; my goal is to find simple
-                solutions.
-            </p>
-            <a href="~/projects" class="btn btn-outline-light">Project Portfolio</a>
-        </div>
-
-        <div class="banner-brace">}</div>
-
-    </div>
-</div>
+@await Html.PartialAsync("_ShoutBanner")
 
 <div class="row">
-    <div class="col col-12 col-md-7 mt-2">
+    <div class="col col-12 col-md-7">
 
         @await Html.PartialAsync("_EmploymentList")
 
     </div>
-    <div class="col col-12 col-md-5 mt-5">
+    <div class="col col-12 col-md-5">
 
         @await Html.PartialAsync("_TechnologiesList")
 
