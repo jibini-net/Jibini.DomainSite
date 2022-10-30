@@ -1,11 +1,58 @@
 ﻿@namespace Jibini.DomainSite.Pages
+@inject IConfiguration config
+
+@{
+    var netk = config["EmploymentLinks:Netkinetix"] ?? "about:blank";
+    var multistack = config["EmploymentLinks:Multistack"] ?? "about:blank";
+    var festi = config["EmploymentLinks:Festival"] ?? "about:blank";
+
+    var aspNet = config["MiscLinks:AspNet"] ?? "about:blank";
+    var sqlServer = config["MiscLinks:SqlServer"] ?? "about:blank";
+    var blazor = config["MiscLinks:Blazor"] ?? "about:blank";
+    var uwLaxCs = config["MiscLinks:UwLaxCs"] ?? "about:blank";
+    var epicor = config["MiscLinks:Epicor"] ?? "about:blank";
+}
 
 <div class="bg-light text-dark p-3 mt-5">
 
     <h5><i>August 2021 - Now</i></h5>
-    <h4><a target="_blank" href="https://netkinetix.com">Netkinetix</a> <span style="font-size: 0.9rem;">Software Developer</span></h4>
+    <h4><a target="_blank" href="@netk">Netkinetix</a> <span class="smaller">Software Developer</span></h4>
     <p>&mdash;</p>
-    <p>Lorem ipsum</p>
+    <p>
+        We work with customers from all across the country to address their
+        unique business needs and challenges. The crew specializes in
+        applications built on
+        <a target="_blank" href="@aspNet">ASP.NET Core</a> and
+        <a target="_blank" href="@sqlServer">Microsoft SQL Server</a>.
+    </p>
+    <p>
+        The focus is on the needs of the customer, and thus projects are
+        constantly in flux. We balance changing priorities, meet shifting
+        deadlines, and interact with wildly varied projects
+        simultaneously&mdash;whatever is needed to drive productivity and
+        deliver consistent products.
+    </p>
+    <p>
+        I pushed to incorporate new tools, including adopting
+        <a target="_blank" href="@blazor">Blazor</a>
+        as a frontend technology. We built new libraries shared across our
+        projects to increase code reuse and reduce redundant effort.
+    </p>
+
+</div>
+
+<div class="border border-light p-3 mt-3 d-flex flex-row">
+
+    <div>
+        <h5 style="font-weight: normal;"><i>Fall 2020 - In Progress</i></h5>
+        <h4><a target="_blank" href="@uwLaxCs">University of Wisconsin&mdash;La Crosse</a></h4>
+    </div>
+
+    <div class="ms-auto" style="text-align: right;">
+        <span>Bachelor's in</span><br /><strong>Computer Science</strong><br />
+        <p class="mb-1">-</p>
+        <span>math minor</span>
+    </div>
 
 </div>
 
@@ -14,17 +61,33 @@
 <div class="bg-white bg-opacity-75 text-dark p-3">
 
     <h5><i>June 2020 - August 2021</i></h5>
-    <h4><a target="_blank" href="https://multistack.com">Multistack, LLC.</a> <span style="font-size: 0.9rem;">Internal Tools Developer</span></h4>
+    <h4><a target="_blank" href="@multistack">Multistack, LLC.</a> <span class="smaller">Internal Tools Developer</span></h4>
     <p>&mdash;</p>
-    <p>dolor sit amet</p>
+    <p>
+        My favorite part of this job was the direct interaction with engineers.
+        With rapid feedback from the team, I implemented and deployed intuitive
+        reporting tools to access data in
+        <a target="_blank" href="@epicor">Epicor ERP</a>. The
+        tool is still used throughout the company and saves countless hours of
+        navigating cluttered screens.
+    </p>
+    <p>
+        In the meantime, I learned crucial details about inventory management
+        and the engineering process.
+    </p>
 
 </div>
 
 <div class="bg-white bg-opacity-75 text-dark p-3 mt-3">
 
     <h5><i>Summer 2019 - Summer 2020</i></h5>
-    <h4><a target="_blank" href="https://www.festfoods.com">Festival Foods</a> <span style="font-size: 0.9rem;">Kitchen Prep</span></h4>
+    <h4><a target="_blank" href="@festi">Festival Foods</a> <span class="smaller">Kitchen Prep</span></h4>
     <p>&mdash;</p>
-    <p>dolor sit amet</p>
+    <p>
+        Working in the regional "Fresh Cut" department, which pre-prepares
+        produce for four local stores. That includes hundreds of party trays,
+        containers of pre-cut food, and the logistics to get it all out the
+        door on time.
+    </p>
 
 </div>
