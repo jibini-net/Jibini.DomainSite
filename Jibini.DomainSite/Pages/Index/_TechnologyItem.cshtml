@@ -12,7 +12,7 @@
         <h5 class="text-light @Model.NameClass">@Model.Name</h5>
         @if (Model.ShowDescription)
         {
-            <p class="m-0">@Model.Description</p>
+            <p class="m-0">@Html.Raw(Model.Description)</p>
         }
 
     </div>

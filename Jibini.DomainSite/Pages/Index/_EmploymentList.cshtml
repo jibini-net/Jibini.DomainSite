@@ -13,13 +13,20 @@
     var epicor = config["MiscLinks:Epicor"] ?? "about:blank";
 }
 
+<div style="width: 40%;max-width: 100%;z-index: -1;position: absolute;margin-top: -10000px;margin-top: calc(-10000px + 3rem);height: 10000px;margin-bottom:-3rem;" class="bg-dark"></div>
+
 <div class="bg-light text-dark p-3 mt-5">
 
     <h5><i>August 2021 - Now</i></h5>
-    <h4><a target="_blank" href="@netk">Netkinetix</a> <span class="smaller">Software Developer</span></h4>
+    <h4>
+        <a target="_blank" href="@netk" style="text-decoration: none;" class="m-2">
+            <img src="~/images/netkinetix.png" width="160" alt="Netkinetix" />
+        </a>
+        <span class="smaller">.NET Software Developer</span>
+    </h4>
     <p>&mdash;</p>
     <p>
-        We work with customers from all across the country to address their
+        We work with customers from public and private sectors to address their
         unique business needs and challenges. The crew specializes in
         applications built on
         <a target="_blank" href="@aspNet">ASP.NET Core</a> and
@@ -41,11 +48,11 @@
 
 </div>
 
-<div class="border border-light p-3 mt-3 d-flex flex-row">
+<div class="border border-light p-3 mt-3 d-flex flex-row" style="background: #ffffff0d;">
 
     <div>
-        <h5 style="font-weight: normal;"><i>Fall 2020 - In Progress</i></h5>
-        <h4><a target="_blank" href="@uwLaxCs">University of Wisconsin&mdash;La Crosse</a></h4>
+        <h5 style="font-weight: normal;"><i>Fall 2020 - Spring 2023</i></h5>
+        <h4><a target="_blank" href="@uwLaxCs" style="color: #b7cddd;">University of Wisconsin&mdash;La Crosse</a></h4>
     </div>
 
     <div class="ms-auto" style="text-align: right;">
@@ -58,7 +65,7 @@
 
 <div class="border-top border-light my-3"></div>
 
-<div class="bg-white bg-opacity-75 text-dark p-3">
+<div class="bg-white text-dark p-3 bg-opacity-75">
 
     <h5><i>June 2020 - August 2021</i></h5>
     <h4><a target="_blank" href="@multistack">Multistack, LLC.</a> <span class="smaller">Internal Tools Developer</span></h4>
@@ -68,17 +75,17 @@
         With rapid feedback from the team, I implemented and deployed intuitive
         reporting tools to access data in
         <a target="_blank" href="@epicor">Epicor ERP</a>. The
-        tool is still used throughout the company and saves countless hours of
+        tools are still used throughout the company and save countless hours of
         navigating cluttered screens.
     </p>
     <p>
         In the meantime, I learned crucial details about inventory management
-        and the engineering process.
+        and the mechanical engineering process.
     </p>
 
 </div>
 
-<div class="bg-white bg-opacity-75 text-dark p-3 mt-3">
+<div class="bg-white text-dark p-3 mt-3 bg-opacity-75">
 
     <h5><i>Summer 2019 - Summer 2020</i></h5>
     <h4><a target="_blank" href="@festi">Festival Foods</a> <span class="smaller">Kitchen Prep</span></h4>
@@ -91,3 +98,5 @@
     </p>
 
 </div>
+
+<img src="~/images/swirlies.svg" style="position: fixed;bottom: 0;z-index: -2;max-width: 100%;max-width: min(100%, 725px);" width="40%" class="d-none d-md-block" />

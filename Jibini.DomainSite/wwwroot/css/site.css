@@ -138,6 +138,10 @@ body {
             width: 100%;
         }
 
+.techs-container a {
+    color: lightgrey;
+}
+
 @media only screen and (max-width: 960px) {
     .content .top-bar {
         flex-direction: column;
